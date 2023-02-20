@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+    .headstyle {
+        color: rgb(255, 255, 255);
+        font-variant: petite-caps;
+        background-color: rgb(0, 0, 0, 0.8);
+        margin-bottom: 0px
+    }
+
+    .divstyle {
+        border-radius: 10px 10px 10px 10px;
+        margin-left: 1px;
+        margin-right: 1px
+    }
+</style>	
+
+<head>
+	<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}" media="screen" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<title>MedCheck</title>
+	</head>
+	<body style="border: blueviolet;"
+	style="background-color: navy;">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">MedCheck</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tests
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="{{url_for('alzheimer')}}">Alzheimer</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('brainTumour')}}">Brain Tumour</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('breastCancer')}}">Breast Cancer</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('covid')}}">Covid-19</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('diabetes')}}">Diabetes</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('heartDisease')}}">Heart Disease</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('pneumonia')}}">Pneumonia</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+<h1 class='text-center py-3'
+style="font-variant: petite-caps;margin-bottom:0px">
+<b>MedCheck - an all in one medical solution</b>
+</h1>
+
+  <div class="row" style="font-size: 20px;padding: 0px 50px 50px 50px;">
+      <p><b>MedCheck</b> is an all in one medical solution website which brings 7 Disease
+          Detections like Covid Detection, Brain Tumor Detection, Breast Cancer Detection, Alzheimer Detection,
+          Diabetes Detection, Pneumonia Detection, and Heart Disease Detection under one platform.</p>
+
+      <h2 class='text-center py-3'
+          style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
+          <b><i>7 Disease Detections</i></b>
+      </h2>
+
+      <div class='divstyle' style='margin:40px 20px 60px 20px'>
+          <div class="row py-3">
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Covid Detection</b></h3>
+                  <a href="{{url_for('covid')}}"><img src="../static/Images/icons/covid.jpg" class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Brain Tumour Detection</b></h3>
+                  <a href="./brainTumour"><img src="../static/Images/icons/braintumor.png"
+                          class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Breast Cancer Detection</b></h3>
+                  <a href="./breastCancer"><img src="../static/Images/icons/breastcancer.jpg"
+                          class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Alzheimer Detection</b></h3>
+                  <a href="./alzheimer"><img src="../static/Images/icons/alzheimer.jpg"
+                          class="img-fluid mx-auto d-block"></a>
+              </div>
+          </div>
+      </div>
+
+      <div class='divstyle' style='margin:40px 20px 60px 20px'>
+          <div class="row py-3">
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Diabetes Detection</b></h3>
+                  <a href="./diabetes"><img src="../static/Images/icons/diabetes.png" class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Pneumonia Detection</b></h3>
+                  <a href="./pneumonia"><img src="../static/Images/icons/pneumonia.png"
+                          class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+                  <h3 class='text-center py-3 headstyle' style="font-size: 18px;"><b>Heart Disease Detection</b></h3>
+                  <a href="./heartDisease"><img src="static\Images\icons\heartdiesase.jpg"
+                          class="img-fluid mx-auto d-block"></a>
+              </div>
+              <div class="col md-3">
+              </div>
+          </div>
+      </div>
+
+
+      <h3 class='text-center py-3'
+          style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
+          <b><i>Deep Learning in Health Care</i></b>
+      </h3>
+      <div class="row py-3"
+          style='margin-bottom: 30px;'>
+          <div class="col">
+              <p class="text-left" style='font-size:18px'>
+                  The Deep Learning (DL) technologies becoming ever present in modern business and
+                  everyday
+                  life is
+                  also steadily being applied to health care. The use of Deep Learning in health care has
+                  the
+                  potential to assist health care providers in many aspects of patient care and administrative
+                  processes. Most
+                  DL and health care technologies have strong relevance to the health care field, but the tactics
+                  they
+                  support
+                  can vary significantly. And while some articles on Deep Learning in health care suggest
+                  that the
+                  use of Deep Learning in health care can perform just as well or better than humans at
+                  certain
+                  procedures, such as diagnosing disease, it will be a significant number of years before DL in
+                  health care
+                  replaces humans for a broad range of medical tasks.
+              </p>
+          </div>
+          <div class="col">
+              <img src="..\static\Images\healthcure.png" class="img-fluid rounded mx-auto d-block" alt="...">
+          </div>
+      </div>
+
+      <h3 class='text-center py-3'
+          style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
+          <b><i>Machine Learning In Health Care</i></b>
+      </h3>
+      <div class="row py-3" style='margin-bottom: 30px'>
+          <div class="col">
+              <p class="text-left" style='font-size:18px'>
+                  Machine learning is one of the most common forms of Artifical intelligence in health care. It is
+                  a
+                  broad technique at the core of many approaches to AI and health care technology and there are
+                  many
+                  versions of it.
+                  Using Artifical intelligence in health care, the most widespread utilization of traditional
+                  machine
+                  learning is precision medicine. Being able to predict what treatment procedures are likely to be
+                  successful
+                  with patients based on their make-up and the treatment framework is a huge leap forward for many
+                  health care organizations. The majority of AI in health care that uses machine learning and
+                  precision
+                  medicine applications require data for training, for which the end result is known. This is
+                  known as
+                  supervised learning.
+              </p>
+          </div>
+          <div class="col">
+              <img src="../static/Images/ml.png" class="img-fluid rounded mx-auto d-block" alt="...">
+          </div>
+      </div>
+
+
+      <!-- <h3 class='text-center py-3'
+          style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
+          <b><i>Natural Language Processing</i></b>
+      </h3>
+      <div class="row py-3" style='margin-bottom: 30px'>
+          <div class="col">
+              <p class="text-left" style='font-size:18px'>
+                  Making sense of human language has been a goal of Artifical intelligence and health care
+                  technology
+                  for over
+                  50 years. Most NLP systems include forms of speech recognition or text analysis and then
+                  translation. A
+                  common use of Artifical intelligence in health care involves NLP applications that can
+                  understand
+                  and
+                  classify clinical documentation. NLP systems can analyze unstructured clinical notes on
+                  patients,
+                  giving
+                  incredible insight into understanding quality, improving methods, and better results for
+                  patients.
+              </p>
+          </div>
+          <div class="col">
+              <img src="../static/Images/nlp.jpg" class="img-fluid rounded mx-auto d-block" style='width:auto; height:300px'
+                  alt="...">
+          </div>
+      </div>
+  </div> -->
+
+
+
+
+  <footer class='text-light bg-dark position-relative '>
+      <p class='text-center py-1 my-0'>
+           Developed by: Capstone Group-55
+      </p>
+  </footer>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+  crossorigin="anonymous"></script>
+	</body>
+</html>
+
