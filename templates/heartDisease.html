@@ -5,7 +5,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-		<title>Heart Disease Test</title>
+		<title>Heart Disease Model Demo</title>
 	</head>
 	<body style="border: blueviolet;"
 	style="background-color: aqua;"> 
@@ -19,14 +19,15 @@
 		<nav class="navbar sticky-top navbar-dark bg-dark">
 			<div class="container-fluid">
 			  <a class="navbar-brand" href="{{url_for('home')}}">MedCheck</a>
+			  <a class="btn btn-outline-light ml-auto" href="{{url_for('home')}}">Home</a>
 			</div>
 		  </nav>
 		<div class="container">
 			<br>
 			<!--Form-->
-			<form action = "{{url_for('predict',checkup='heartDisease')}}" method ="POST" >
+			<form action = "{{url_for('predict',checkup='heart_disease')}}" method ="POST" >
 				<fieldset>
-				<legend >Heart Disease Prediction Using Machine Learning</legend><br>
+				<legend >Heart Disease Model Demo</legend><br>
 				  <div class="card card-body">
 					  <div class="form-group  col-sm">
 						<div class="col-sm">
@@ -36,7 +37,7 @@
 						<div class="col-sm">
 							<label for="sex" >Gender</label>
 							<select class="form-control" id="sex"  name="sex" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "1" style="color: blue;" style="background-color: aqua;">Male</option>
 							  <option value = "0" style="color: purple;" style="background-color: palevioletred;">Female</option>
 							</select>
@@ -47,7 +48,7 @@
 						  <div class="col-sm">
 							<label for="cp">Chest Pain Type</label>
 							<select class="form-control" id="cp" name = "cp" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "0">Typical Angina</option>
 							  <option value = "1">Atypical Angina</option>
 							  <option value = "2">Non-anginal Pain</option>
@@ -59,13 +60,13 @@
 							<input type="number" class="form-control" id="trestbps" name="trestbps"  required>
 						  </div>
 						  <div class="col-sm">
-							<label for="chol">Serum Cholestoral in mg/dl</label>
+							<label for="chol">Serum Cholesterol (mg/dL)</label>
 							<input type="number" class="form-control" id="chol" name="chol" required>
 						  </div>
 						  <div class="col-sm">
 							<label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
 							<select class="form-control" id="fbs" name="fbs" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "0">False</option>
 							  <option value = "1">True</option>
 							</select>
@@ -77,7 +78,7 @@
 							<div class="col-sm">
 								<label for="restecg">Resting ECG Results </label>
 								<select class="form-control" id="restecg" name="restecg" required>
-								  <option disabled selected value> -- Select an Option -- </option>
+								  <option disabled selected value>Select an option</option>
 								  <option value = "0">Normal</option>
 								  <option value = "1">Having ST-T wave abnormality  </option>
 								  <option value = "2"> Probable or definite left ventricular hypertrophy  </option>
@@ -94,7 +95,7 @@
 							  <div class="col-sm">
 								<label for="exang">Exercise Induced Angina </label>
 								<select class="form-control" id="oldpeak" name="oldpeak" required>
-								  <option disabled selected value> -- Select an Option -- </option>
+								  <option disabled selected value>Select an option</option>
 								  <option value = "0">No</option>
 								  <option value = "1">Yes</option>
 								</select>
@@ -105,16 +106,16 @@
 						  <div class="col-sm">
 							<label for="slope">Slope of the Peak Exercise ST Segment </label>
 							<select class="form-control" id="slope" name="slope" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "0">Upsloping</option>
 							  <option value = "1">Flat</option>
 							  <option value = "2">Downsloping</option>
 							</select>
 						  </div>
 						  <div class="col-sm">
-							<label for="ca">Number of Vessels Colored by Flourosopy</label>
+							<label for="ca">Number of major vessels colored by fluoroscopy</label>
 							<select class="form-control" id="ca" name = "ca" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "0">0</option>
 							  <option value = "1">1</option>
 							  <option value = "2">2</option>
@@ -124,16 +125,16 @@
 						  <div class="col-sm">
 							<label for="thal">Thalassemia</label>
 							<select class="form-control" id="thal" name = "thal" required>
-							  <option disabled selected value> -- Select an Option -- </option>
+							  <option disabled selected value>Select an option</option>
 							  <option value = "3">Normal</option>
 							  <option value = "6">Fixed defect</option>
-							  <option value = "7">Reversable defect</option>
+							  <option value = "7">Reversible defect</option>
 							</select>
 						  </div>
 					  </div>
 					  <br>
 					  <div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Result" style="border: aqua;" style="background-color: crimson;">
+						<input class="btn btn-primary" type="submit" value="Run model" style="border: aqua;" style="background-color: crimson;">
 					  </div>
 					  
 					  <!--Prediction Result-->
