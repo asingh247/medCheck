@@ -5,7 +5,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-		<title>Brain Tumour Test</title>
+		<title>Brain Tumour Model Demo</title>
 	</head>
 	<body style="border: blueviolet;"
 	style="background-color: aqua;"> 
@@ -19,6 +19,7 @@
 		<nav class="navbar sticky-top navbar-dark bg-dark">
 			<div class="container-fluid">
 			  <a class="navbar-brand" href="{{url_for('home')}}">MedCheck</a>
+			  <a class="btn btn-outline-light ml-auto" href="{{url_for('home')}}">Home</a>
 			</div>
 		  </nav>
 		<div class="container">
@@ -26,7 +27,7 @@
 			<!--Form-->
 			<form action = "{{url_for('predict',checkup='brain_tumour')}}" method ="POST" enctype="multipart/form-data" >
 				<fieldset>
-				<legend >Brain Tumour Prediction Using Deep Learning</legend><br>
+				<legend >Brain Tumour Model Demo</legend><br>
 				  <div class="card card-body">
 					<div>
 						<form id="upload-file" method="post" enctype="multipart/form-data">
@@ -46,7 +47,7 @@
 					  </div>
 					   <br>
 					  <div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Result" style="border: aqua;" style="background-color: crimson;">
+						<input class="btn btn-primary" type="submit" value="Run model" style="border: aqua;" style="background-color: crimson;">
 					  </div>
 					  
 					  <!--Prediction Result-->
